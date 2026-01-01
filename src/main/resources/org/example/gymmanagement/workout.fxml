@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            style="-fx-background-color: #f4f6f9;">
+
+    <!-- TOP BAR -->
+    <top>
+        <HBox spacing="10"
+              style="-fx-background-color: white; -fx-border-color: #dcdfe6; -fx-border-width: 0 0 1 0;">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+
+            <Label text="Select Member:"
+                   style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+
+            <ComboBox fx:id="memberComboBox"
+                      prefWidth="200"
+                      style="-fx-background-radius: 6;"/>
+
+            <Label fx:id="memberInfoLabel"
+                   text="Member Info"
+                   style="-fx-text-fill: #555;"/>
+        </HBox>
+    </top>
+
+    <!-- CENTER -->
+    <center>
+        <HBox spacing="20">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <!-- WORKOUT PLAN -->
+            <VBox spacing="10"
+                  style="-fx-background-color: white;
+                         -fx-background-radius: 12;
+                         -fx-padding: 15;
+                         -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 10, 0, 0, 4);">
+
+                <Label text="Workout Plan"
+                       style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+
+                <TableView fx:id="workoutTable" prefWidth="400">
+                    <columns>
+                        <TableColumn fx:id="exerciseCol" text="Exercise"/>
+                        <TableColumn fx:id="setsCol" text="Sets"/>
+                        <TableColumn fx:id="repsCol" text="Reps"/>
+                        <TableColumn fx:id="dayCol" text="Day"/>
+                    </columns>
+                </TableView>
+
+                <HBox spacing="10">
+                    <Button text="Add"
+                            style="-fx-background-color: #2d89ef; -fx-text-fill: white; -fx-background-radius: 6;"/>
+                    <Button text="Delete"
+                            style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-background-radius: 6;"/>
+                </HBox>
+            </VBox>
+
+            <!-- DIET PLAN -->
+            <VBox spacing="10"
+                  style="-fx-background-color: white;
+                         -fx-background-radius: 12;
+                         -fx-padding: 15;
+                         -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 10, 0, 0, 4);">
+
+                <Label text="Diet Plan"
+                       style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+
+                <TableView fx:id="dietTable" prefWidth="400">
+                    <columns>
+                        <TableColumn fx:id="mealCol" text="Meal"/>
+                        <TableColumn fx:id="foodCol" text="Food"/>
+                        <TableColumn fx:id="caloriesCol" text="Calories"/>
+                    </columns>
+                </TableView>
+
+                <HBox spacing="10">
+                    <Button text="Add"
+                            style="-fx-background-color: #2d89ef; -fx-text-fill: white; -fx-background-radius: 6;"/>
+                    <Button text="Delete"
+                            style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-background-radius: 6;"/>
+                </HBox>
+            </VBox>
+
+        </HBox>
+    </center>
+
+    <!-- BOTTOM BAR -->
+    <bottom>
+        <HBox spacing="15"
+              alignment="CENTER"
+              style="-fx-background-color: white; -fx-border-color: #dcdfe6; -fx-border-width: 1 0 0 0;">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+
+            <Button text="Save All"
+                    style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-background-radius: 8; -fx-padding: 8 20;"/>
+
+            <Button text="Back"
+                    style="-fx-background-color: #7f8c8d; -fx-text-fill: white; -fx-background-radius: 8; -fx-padding: 8 20;"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>

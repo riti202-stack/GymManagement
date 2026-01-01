@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.gymmanagement.userController"
+            fitToWidth="true">
+
+    <content>
+        <VBox spacing="20" style="-fx-padding: 10;">
+
+            <!-- Payments Section -->
+            <VBox spacing="5">
+                <Label text="Payments" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+                <TableView fx:id="paymentsTable" prefHeight="150">
+                    <columns>
+                        <TableColumn text="ID" fx:id="paymentIdCol"/>
+                        <TableColumn text="Amount" fx:id="paymentAmountCol"/>
+                        <TableColumn text="Date" fx:id="paymentDateCol"/>
+                    </columns>
+                </TableView>
+            </VBox>
+
+            <!-- Attendance Section -->
+            <VBox spacing="5">
+                <Label text="Attendance" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+                <TableView fx:id="attendanceTable" prefHeight="150">
+                    <columns>
+                        <TableColumn text="Date" fx:id="attendanceDateCol"/>
+                        <TableColumn text="Status" fx:id="attendanceStatusCol"/>
+                    </columns>
+                </TableView>
+            </VBox>
+
+            <!-- Workout Section -->
+            <VBox spacing="5">
+                <Label text="Workout" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+                <TableView fx:id="workoutTable" prefHeight="150">
+                    <columns>
+                        <TableColumn text="Exercise" fx:id="workoutExerciseCol"/>
+                        <TableColumn text="Reps" fx:id="workoutRepsCol"/>
+                        <TableColumn text="Date" fx:id="workoutDateCol"/>
+                    </columns>
+                </TableView>
+            </VBox>
+
+            <!-- Diet Section -->
+            <VBox spacing="5">
+                <Label text="Diet" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+                <TableView fx:id="dietTable" prefHeight="150">
+                    <columns>
+                        <TableColumn text="Meal" fx:id="dietMealCol"/>
+                        <TableColumn text="Calories" fx:id="dietCaloriesCol"/>
+                        <TableColumn text="Date" fx:id="dietDateCol"/>
+                    </columns>
+                </TableView>
+            </VBox>
+
+            <!-- Weight Section -->
+            <VBox spacing="5">
+                <Label text="Weight" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+                <TableView fx:id="weightTable" prefHeight="150">
+                    <columns>
+                        <TableColumn text="Weight (kg)" fx:id="weightCol"/>
+                        <TableColumn text="Date" fx:id="weightDateCol"/>
+                    </columns>
+                </TableView>
+            </VBox>
+
+        </VBox>
+    </content>
+
+</ScrollPane>
