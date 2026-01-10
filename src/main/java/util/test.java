@@ -1,3 +1,5 @@
+
+
 package util;
 import java.sql.Connection;
 
@@ -7,4 +9,3 @@ public class test {
         System.out.println(con != null ? "SQLite Connected ✅" : "Failed ❌");
     }
 }
-

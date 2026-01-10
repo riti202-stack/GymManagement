@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 
 public class DBConnection {
 
+    // Use the same file as DatabaseSetup
     private static final String URL = "jdbc:sqlite:database/gym.db";
 
     public static Connection getConnection() {
