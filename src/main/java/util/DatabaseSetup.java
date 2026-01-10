@@ -1,6 +1,7 @@
 package util;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class DatabaseSetup {
@@ -8,7 +9,10 @@ public class DatabaseSetup {
         try (Connection con = DBConnection.getConnection();
              Statement st = con.createStatement()) {
 
-            // Users table
+            // Enable foreign key support
+            st.execute("PRAGMA foreign_keys = ON;");
+
+            // Users table (login system)
             st.execute("CREATE TABLE IF NOT EXISTS users (" +
                     "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     "username TEXT UNIQUE NOT NULL, " +
@@ -16,7 +20,7 @@ public class DatabaseSetup {
                     "role TEXT NOT NULL" +
                     ");");
 
-            // Members table
+            // Members table (profile info)
             st.execute("CREATE TABLE IF NOT EXISTS members (" +
                     "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     "user_id INTEGER UNIQUE, " +
@@ -79,7 +83,7 @@ public class DatabaseSetup {
             // Insert default manager
             st.execute("INSERT OR IGNORE INTO users(username,password,role) VALUES('admin','1234','manager');");
 
-            // Insert sample users
+            // Insert sample users and members
             st.execute("INSERT OR IGNORE INTO users(id,username,password,role) VALUES(2,'john','123','user');");
             st.execute("INSERT OR IGNORE INTO members(user_id,name,email,phone,join_date) " +
                     "VALUES(2,'John Doe','john@example.com','0123456789','2026-01-01');");
@@ -88,10 +92,11 @@ public class DatabaseSetup {
             st.execute("INSERT OR IGNORE INTO members(user_id,name,email,phone,join_date) " +
                     "VALUES(3,'Emma Smith','emma@example.com','0987654321','2026-01-01');");
 
-            System.out.println("Database created and sample data added ✅");
+            System.out.println("✅ Database created and sample data added successfully!");
 
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 }
+
