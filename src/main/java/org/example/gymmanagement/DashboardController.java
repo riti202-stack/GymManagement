@@ -39,6 +39,21 @@ public class DashboardController implements Initializable {
         // Monthly Income (current month)
         updateMonthlyIncome();
     }
+    // Add to DashboardController.java
+    @FXML private Label membersLabel; // fx:id for Members label in Dashboard FXML
+
+    @FXML
+    private void showMembers() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Members.fxml"));
+            Stage stage = (Stage) membersLabel.getScene().getWindow();
+            stage.setScene(new Scene(loader.load()));
+            stage.setTitle("Members Management");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 
     private void updateTotalMembers() {
         String query = "SELECT COUNT(*) as total FROM members";

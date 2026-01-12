@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.stage.Stage;
@@ -235,6 +236,22 @@ public class userController {
             e.printStackTrace();
         }
     }
+
+    @FXML private Button logoutBtn; // Add field
+
+    @FXML
+    private void handleLogout() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("hello-view.fxml"));
+            Stage stage = (Stage) logoutBtn.getScene().getWindow();
+            stage.setScene(new Scene(loader.load()));
+            stage.setTitle("Gym Management Login");
+            System.out.println("👋 User logged out");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 
     // ---------------- Model Classes (UNCHANGED) ----------------
     public static class Payment {

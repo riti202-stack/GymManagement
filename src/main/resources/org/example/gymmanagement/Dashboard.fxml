@@ -32,9 +32,9 @@
                        style="-fx-text-fill: white;
                           -fx-font-size: 14px;" />
 
-                <Label text="Members"
-                       style="-fx-text-fill: white;
-                          -fx-font-size: 14px;" />
+                <Label text="Members" fx:id="membersLabel"
+                       style="-fx-text-fill: white; -fx-font-size: 14px; -fx-cursor: hand; -fx-padding: 10;"
+                       onMouseClicked="#showMembers"/>
 
 
 

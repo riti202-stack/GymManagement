@@ -75,6 +75,9 @@
                     prefHeight="40"
                     prefWidth="200"/>
 
+            <Button fx:id="logoutBtn" text="🚪 Logout" onAction="#handleLogout"
+                    style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10; -fx-padding: 12 25;"/>
+
 
         </VBox>
 
