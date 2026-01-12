@@ -12,6 +12,7 @@ import util.DBConnection;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.time.LocalDate;
 
 public class loginController {
 
@@ -87,16 +88,15 @@ public class loginController {
                 memberStmt.setString(2, user); // default name = username
                 memberStmt.setString(3, ""); // email blank
                 memberStmt.setString(4, ""); // phone blank
-                memberStmt.setString(5, java.time.LocalDate.now().toString()); // join date = today
+                memberStmt.setString(5, LocalDate.now().toString()); // join date = today
                 memberStmt.executeUpdate();
 
                 System.out.println("🆕 New user created and logged in: " + user);
                 switchToUserPanel(userId);
             }
-
         } catch (Exception e) {
+            errorLabel.setText("Database connection error!");
             e.printStackTrace();
-            errorLabel.setText("Database error!");
         }
     }
 
@@ -107,6 +107,7 @@ public class loginController {
             stage.setScene(new Scene(loader.load()));
             stage.setTitle("Gym Management Dashboard");
         } catch (Exception e) {
+            errorLabel.setText("Error switching to dashboard!");
             e.printStackTrace();
         }
     }
@@ -118,10 +119,17 @@ public class loginController {
             stage.setScene(new Scene(loader.load()));
             stage.setTitle("User Panel");
 
+            // Get the userController and pass the userId
             userController controller = loader.getController();
-            controller.setUserId(userId); // send member id to panel
+            if (controller != null) {
+                controller.setUserId(userId);
+            } else {
+                System.err.println("userController not found!");
+                errorLabel.setText("Error loading user panel!");
+            }
 
         } catch (Exception e) {
+            errorLabel.setText("Error switching to user panel!");
             e.printStackTrace();
         }
     }

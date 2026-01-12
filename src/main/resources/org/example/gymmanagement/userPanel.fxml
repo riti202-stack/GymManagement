@@ -69,8 +69,15 @@
                     </columns>
                 </TableView>
             </VBox>
+            <Button text="Go to Exercise"
+                    style="-fx-background-color: #4ca1af; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;"
+                    onAction="#goToExercise"
+                    prefHeight="40"
+                    prefWidth="200"/>
+
 
         </VBox>
+
     </content>
 
 </ScrollPane>

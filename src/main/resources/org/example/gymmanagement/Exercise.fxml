@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.gymmanagement.ExerciseController"
+      spacing="15"
+      style="-fx-padding: 20; -fx-background-color: #f0f4f7;">
+
+    <Label text="Exercise &amp; Timer"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+    <!-- Exercise 1 -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Push Ups" prefWidth="100"/>
+        <Label fx:id="timer1" text="00:00" prefWidth="60"/>
+        <Label fx:id="reps1" text="0 reps" prefWidth="60"/>
+        <Button text="Start" onAction="#startTimer1"/>
+        <Button text="Pause" onAction="#pauseTimer1"/>
+        <Button text="Stop" onAction="#stopTimer1"/>
+        <Button text="+ Rep" onAction="#addRep1"/>
+    </HBox>
+
+    <!-- Exercise 2 -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Squats" prefWidth="100"/>
+        <Label fx:id="timer2" text="00:00" prefWidth="60"/>
+        <Label fx:id="reps2" text="0 reps" prefWidth="60"/>
+        <Button text="Start" onAction="#startTimer2"/>
+        <Button text="Pause" onAction="#pauseTimer2"/>
+        <Button text="Stop" onAction="#stopTimer2"/>
+        <Button text="+ Rep" onAction="#addRep2"/>
+    </HBox>
+
+    <!-- Exercise 3 -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Sit Ups" prefWidth="100"/>
+        <Label fx:id="timer3" text="00:00" prefWidth="60"/>
+        <Label fx:id="reps3" text="0 reps" prefWidth="60"/>
+        <Button text="Start" onAction="#startTimer3"/>
+        <Button text="Pause" onAction="#pauseTimer3"/>
+        <Button text="Stop" onAction="#stopTimer3"/>
+        <Button text="+ Rep" onAction="#addRep3"/>
+    </HBox>
+
+    <!-- Exercise 4 -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Lunges" prefWidth="100"/>
+        <Label fx:id="timer4" text="00:00" prefWidth="60"/>
+        <Label fx:id="reps4" text="0 reps" prefWidth="60"/>
+        <Button text="Start" onAction="#startTimer4"/>
+        <Button text="Pause" onAction="#pauseTimer4"/>
+        <Button text="Stop" onAction="#stopTimer4"/>
+        <Button text="+ Rep" onAction="#addRep4"/>
+    </HBox>
+
+    <!-- Exercise 5 -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Plank" prefWidth="100"/>
+        <Label fx:id="timer5" text="00:00" prefWidth="60"/>
+        <Label fx:id="reps5" text="0 reps" prefWidth="60"/>
+        <Button text="Start" onAction="#startTimer5"/>
+        <Button text="Pause" onAction="#pauseTimer5"/>
+        <Button text="Stop" onAction="#stopTimer5"/>
+        <Button text="+ Rep" onAction="#addRep5"/>
+    </HBox>
+
+    <!-- Exercise 6 -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Burpees" prefWidth="100"/>
+        <Label fx:id="timer6" text="00:00" prefWidth="60"/>
+        <Label fx:id="reps6" text="0 reps" prefWidth="60"/>
+        <Button text="Start" onAction="#startTimer6"/>
+        <Button text="Pause" onAction="#pauseTimer6"/>
+        <Button text="Stop" onAction="#stopTimer6"/>
+        <Button text="+ Rep" onAction="#addRep6"/>
+    </HBox>
+
+    <!-- Exercise 7 -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Jumping Jacks" prefWidth="100"/>
+        <Label fx:id="timer7" text="00:00" prefWidth="60"/>
+        <Label fx:id="reps7" text="0 reps" prefWidth="60"/>
+        <Button text="Start" onAction="#startTimer7"/>
+        <Button text="Pause" onAction="#pauseTimer7"/>
+        <Button text="Stop" onAction="#stopTimer7"/>
+        <Button text="+ Rep" onAction="#addRep7"/>
+    </HBox>
+
+    <!-- Exercise 8 -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Mountain Climbers" prefWidth="100"/>
+        <Label fx:id="timer8" text="00:00" prefWidth="60"/>
+        <Label fx:id="reps8" text="0 reps" prefWidth="60"/>
+        <Button text="Start" onAction="#startTimer8"/>
+        <Button text="Pause" onAction="#pauseTimer8"/>
+        <Button text="Stop" onAction="#stopTimer8"/>
+        <Button text="+ Rep" onAction="#addRep8"/>
+    </HBox>
+
+    <!-- Exercise 9 -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Leg Raises" prefWidth="100"/>
+        <Label fx:id="timer9" text="00:00" prefWidth="60"/>
+        <Label fx:id="reps9" text="0 reps" prefWidth="60"/>
+        <Button text="Start" onAction="#startTimer9"/>
+        <Button text="Pause" onAction="#pauseTimer9"/>
+        <Button text="Stop" onAction="#stopTimer9"/>
+        <Button text="+ Rep" onAction="#addRep9"/>
+    </HBox>
+
+    <!-- Exercise 10 -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Bicep Curls" prefWidth="100"/>
+        <Label fx:id="timer10" text="00:00" prefWidth="60"/>
+        <Label fx:id="reps10" text="0 reps" prefWidth="60"/>
+        <Button text="Start" onAction="#startTimer10"/>
+        <Button text="Pause" onAction="#pauseTimer10"/>
+        <Button text="Stop" onAction="#stopTimer10"/>
+        <Button text="+ Rep" onAction="#addRep10"/>
+    </HBox>
+
+    <!-- Exercise 11 -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Tricep Dips" prefWidth="100"/>
+        <Label fx:id="timer11" text="00:00" prefWidth="60"/>
+        <Label fx:id="reps11" text="0 reps" prefWidth="60"/>
+        <Button text="Start" onAction="#startTimer11"/>
+        <Button text="Pause" onAction="#pauseTimer11"/>
+        <Button text="Stop" onAction="#stopTimer11"/>
+        <Button text="+ Rep" onAction="#addRep11"/>
+    </HBox>
+
+    <!-- Exercise 12 -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Crunches" prefWidth="100"/>
+        <Label fx:id="timer12" text="00:00" prefWidth="60"/>
+        <Label fx:id="reps12" text="0 reps" prefWidth="60"/>
+        <Button text="Start" onAction="#startTimer12"/>
+        <Button text="Pause" onAction="#pauseTimer12"/>
+        <Button text="Stop" onAction="#stopTimer12"/>
+        <Button text="+ Rep" onAction="#addRep12"/>
+    </HBox>
+
+    <!-- Attendance Button -->
+    <Button fx:id="attendanceBtn"
+            text="Mark Attendance"
+            style="-fx-background-color: #4ca1af; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;"
+            onAction="#markAttendance"
+            prefHeight="40"
+            prefWidth="200"/>
+    <Button fx:id="backBtn"
+            text="Back to User Panel"
+            style="-fx-background-color: #4ca1af; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;"
+            onAction="#goToUserPanel"
+            prefHeight="40"
+            prefWidth="200"/>
+
+</VBox>
