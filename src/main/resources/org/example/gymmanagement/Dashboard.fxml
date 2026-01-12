@@ -38,10 +38,13 @@
 
 
 
+                <!-- REPLACE your current Payments Label with this: -->
                 <Label text="Payments"
-                       style="-fx-text-fill: white;
-                          -fx-font-size: 14px;"
-                />
+                       fx:id="paymentsLabel"
+                       style="-fx-text-fill: white; -fx-font-size: 14px; -fx-cursor: hand; -fx-padding: 10;"
+                       onMouseClicked="#showPayments"/>
+
+
 
                 <Label text="Logout"
                        style="-fx-text-fill: #e74c3c;
@@ -70,11 +73,8 @@
                                   -fx-background-radius: 15;
                                   -fx-effect: drop shadow(gaussian, rgba(0,0,0,0.1), 10,0,0,5);">
                         <VBox alignment="CENTER" spacing="8">
-                            <Label text=" Total Members"
-                                   style="-fx-font-size: 14px;" />
-                            <Label text="128"
-                                   style="-fx-font-size: 22px;
-                                      -fx-font-weight: bold;" />
+                            <Label text="Total Members" style="-fx-font-size: 14px; -fx-text-fill: #7f8c8d;" />
+                            <Label fx:id="totalMembersLabel" text="128" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" />
                         </VBox>
                     </StackPane>
 
@@ -84,11 +84,8 @@
                                   -fx-background-radius: 15;
                                   -fx-effect: drop shadow(gaussian, rgba(0,0,0,0.1), 10,0,0,5);">
                         <VBox alignment="CENTER" spacing="8">
-                            <Label text=" Monthly Income"
-                                   style="-fx-font-size: 14px;" />
-                            <Label text="45,000"
-                                   style="-fx-font-size: 22px;
-                                      -fx-font-weight: bold;" />
+                            <Label text="Monthly Income" style="-fx-font-size: 14px; -fx-text-fill: #7f8c8d;" />
+                            <Label fx:id="monthlyIncomeLabel" text="45,000" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #27ae60;" />
                         </VBox>
                     </StackPane>
 
